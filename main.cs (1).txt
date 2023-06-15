@@ -1,0 +1,62 @@
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+nnamespace Ultima_Atividade{
+    internal class Program {
+        static int[] m;
+        static void Main(string[] args) {
+            int c, a, d;
+            Console.Write("Quantos motores possui: \n");
+
+            c = int.Parse(Console.ReadLine());
+
+            m = new int[c];
+
+            for (int i = 0; i < c; i++) {
+
+                Console.Write("\n Digite o {0}º valor do motor:", i + 1);
+
+                m[i] = int.Parse(Console.ReadLine());
+
+                d += m[i];
+
+            }
+
+            Console.WriteLine(" \n " + "0 - Sair " + "\n 1 - Lançar gasto" + "\n 2 - Mostrar gastos" + "\n 3 - Motor que gastou mais ");
+
+            a = int.Parse(Console.ReadLine());
+
+            if (a == 0) {
+                Console.WriteLine(" \n " + "0 - Sair " + "\n 1 - Lançar gasto" + "\n 2 - Mostrar gastos" + "\n 3 - Motor que gastou mais ");
+
+            }
+            a = int.Parse(Console.ReadLine());
+            if (a == 1) {
+                Console.WriteLine("O valor total de todos os motores: {0}", d);
+            }
+            if (a == 2) {
+                Console.WriteLine("Os gastos são:")
+                    for (int i = 0; i < c; i++) {
+                    Console.WriteLine("O {0}° Motor tem o valor de: {1}", i + 1, m[i]);
+                }
+            }
+            if (a == 3) {
+                int maiorValor = 0;
+                int motorMaisGasto = 0;
+                for (int i = 0; i < c; i++) {
+                        if (m[i] > maiorValor) {
+                            maiorValor = m[i];
+                            motorMaisGasto = i;
+                        }
+                }
+                Console.WriteLine("O {0}° Motor é o mais gasto, com o valor de: {1}", motorMaisGasto, maiorValor);
+            }
+
+
+        }
+    }
+```
